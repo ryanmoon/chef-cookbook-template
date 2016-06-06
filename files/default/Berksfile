@@ -10,4 +10,3 @@ metadata
 # YTS Cookbooks
 yts_cookbook 'base_config'
 yts_cookbook 'usr_local_bin'
-

@@ -36,6 +36,26 @@ else
 
 end
 
+# Rubocop
+cookbook_file "#{cookbook_dir}/.rubocop.yml" do
+  action :create_if_missing
+end
+
+# Gemfile
+cookbook_file "#{cookbook_dir}/Gemfile" do
+  action :create_if_missing
+end
+
+# Guardfile
+cookbook_file "#{cookbook_dir}/Guardfile" do
+  action :create_if_missing
+end
+
+# Rakefile
+cookbook_file "#{cookbook_dir}/Rakefile" do
+  action :create_if_missing
+end
+
 
 # TK & Serverspec
 template "#{cookbook_dir}/.kitchen.yml" do
