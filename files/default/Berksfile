@@ -1,0 +1,13 @@
+def yts_cookbook(name, version = '>= 0.0.0', options = {})
+  cookbook(name, version, {
+    git: "git@github.com:YouTubeSpaceLosAngeles/chef-#{name}.git"
+  }.merge(options))
+end
+
+source 'https://supermarket.getchef.com'
+
+metadata
+# YTS Cookbooks
+yts_cookbook 'base_config'
+yts_cookbook 'usr_local_bin'
+
